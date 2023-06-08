@@ -1,36 +1,39 @@
-# itgeeker_remove_str_from_word
+# Remove specific strings from Office software word files by itgeeker.net
 
 #### Description
-技术奇客出品的Office系列小工具 - 移除Office Word文件的指定字符。可指定目录和自定义移除字符列表。
+Remove strings from docx tool developed by ITGeeker.net, you can add customize string list. This tool can batch remove fils.
+ITGeeker which is an affiliates of GeekerCloud.com. It's open source software tool for free to use.
 
 #### Software Architecture
-Software architecture description
+Software developed by Python version 3.11, this tool can run on Windows and Linux. Please download execute file for windows 10/11; please run python code directly under linux operation system like ubuntu etc.
 
-#### Installation
+#### Run & Instructions
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+> On Windows
+1.  Download execute file
+2.  Double click the file and run it
+3.  Add strings you would like to remove from documents
+4.  Select directory which includes docx files
+5.  Start removing process
 
-#### Instructions
+> On Linux
+1.  Ensure you have python 3.8 + version
+2.  Install python models: "pip install python-docx tkinter"
+3.  Clone this repository and run "python remove_str_from_word_main.py"
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+Revised files will save to a sub folder of main director, the files name will append "-revised" at the name end.
 
 #### Contribution
 
-1.  Fork the repository
-2.  Create Feat_xxx branch
-3.  Commit your code
-4.  Create Pull Request
+    1.  Fork the repository
+    2.  Create Feat_xxx branch
+    3.  Commit your code
+    4.  Create Pull Request
 
 
 #### Gitee Feature
 
-1.  You can use Readme\_XXX.md to support different languages, such as Readme\_en.md, Readme\_zh.md
-2.  Gitee blog [blog.gitee.com](https://blog.gitee.com)
-3.  Explore open source project [https://gitee.com/explore](https://gitee.com/explore)
-4.  The most valuable open source project [GVP](https://gitee.com/gvp)
-5.  The manual of Gitee [https://gitee.com/help](https://gitee.com/help)
-6.  The most popular members  [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+    1.  Please refer Readme.md to get Chinese instructions.
+    2.  ITGeeker blog [www.itgeeker.net](https://www.itgeeker.net)
+    3.  Explore open source project [https://gitee.com/itgeeker/itgeeker_remove_str_from_word](https://gitee.com/itgeeker/itgeeker_remove_str_from_word)
+    4.  GeekerCloud奇客罗方智能科技 [https://www.geekercloud.com](https://www.geekercloud.com)
