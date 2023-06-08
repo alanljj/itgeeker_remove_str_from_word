@@ -10,16 +10,18 @@ Software developed by Python version 3.11, this tool can run on Windows and Linu
 #### Run & Instructions
 
 > On Windows
-1.  Download execute file
-2.  Double click the file and run it
-3.  Add strings you would like to remove from documents
-4.  Select directory which includes docx files
-5.  Start removing process
+
+    1.  Download execute file
+    2.  Double click the file and run it
+    3.  Add strings you would like to remove from documents
+    4.  Select directory which includes docx files
+    5.  Start removing process
 
 > On Linux
-1.  Ensure you have python 3.8 + version
-2.  Install python models: "pip install python-docx tkinter"
-3.  Clone this repository and run "python remove_str_from_word_main.py"
+
+    1.  Ensure you have python 3.8 + version
+    2.  Install python models: "pip install python-docx tkinter"
+    3.  Clone this repository and run "python remove_str_from_word_main.py"
 
 Revised files will save to a sub folder of main director, the files name will append "-revised" at the name end.
 
