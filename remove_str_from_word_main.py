@@ -4,10 +4,12 @@
 #    ITGeeker.net <alanljj@gmail.com>
 ############################################################################
 import os
+import shutil
 import tkinter
 import tkinter as tk
 from tkinter import *
 from tkinter import ttk
+from tkinter import messagebox
 import tkinter.filedialog
 from remove_str_api import generate_file_and_str_list
 
@@ -64,7 +66,7 @@ class ListSheet(tk.Frame):
         # self.browse_button.pack(padx='5', pady='3')
         self.browse_button.grid(row=5, column=0, padx=10, pady=10, ipadx=10, ipady=5)
 
-        self.start_remove_button = tk.Button(self, text="开始移除", command=self.start_remove_strings_from_files,
+        self.start_remove_button = tk.Button(self, text="开始处理", command=self.start_remove_strings_from_files,
                                              bg='purple',
                                              fg='white',
                                              font=('Microsoft YaHei UI', 11, 'bold'))
@@ -91,7 +93,7 @@ class ListSheet(tk.Frame):
     def add_item(self):
         # item = input("Enter item: ")
         item = self.entry1.get()
-        self.listbox.insert(tk.END, item)
+        self.listbox.insert(tk.END, item.strip())
         self.entry1.delete(0, END)
 
     def edit_item(self):
@@ -102,7 +104,7 @@ class ListSheet(tk.Frame):
                 self.listbox.delete(item)
                 # self.listbox.insert("end", "foo")
         else:
-            tkinter.messagebox.showwarning(title="Error Reminder", message="请先选择想要修改的文字！")
+            messagebox.showwarning(title="Error Reminder", message="请先选择想要修改的文字！")
 
     def get_all_item_list(self):
         values = self.listbox.get(0, END)
@@ -112,29 +114,41 @@ class ListSheet(tk.Frame):
 
     def start_remove_strings_from_files(self):
         val_list = self.get_all_item_list()
+        if val_list:
+            self.save_all_item_to_txt(val_list)
         if not val_list:
-            tkinter.messagebox.showwarning(title="Error Reminder", message="请添加要移除的文字！")
+            messagebox.showwarning(title="Error Reminder", message="请添加要移除的文字！")
         elif not self.entry_path.get() or self.entry_path.get() == '浏览并选择文件目录':
-            tkinter.messagebox.showwarning(title="Error Reminder", message="请先选择文件的目录！")
+            messagebox.showwarning(title="Error Reminder", message="请先选择文件的目录！")
         else:
             print('self.entry_path.get(): %s' % self.entry_path.get())
-            generate_file_and_str_list(self.entry_path.get(), val_list)
+            finished = generate_file_and_str_list(self.entry_path.get(), val_list)
+            if finished:
+                messagebox.showinfo(title="任务通知", message="任务已圆满完成！")
+            else:
+                messagebox.showerror(title="任务错误通知", message="任务完成，但有错误！")
 
     def generate_string_text_ffp(self):
         cur_usr_path = os.environ['USERPROFILE']
         print('cur_usr_path: %s' % cur_usr_path)
         remove_str_f = os.path.join(cur_usr_path, 'remove_string.txt')
+        if not os.path.isfile(remove_str_f):
+            if os.path.isfile('staff_mobile_email.txt'):
+                shutil.move('staff_mobile_email.txt', remove_str_f)
+            else:
+                with open(remove_str_f, 'w') as fp:
+                    pass
         return remove_str_f
 
     def save_all_item_to_txt(self, value_list):
         remove_str_f = self.generate_string_text_ffp()
-        with open(remove_str_f, 'w') as f:
+        with open(remove_str_f, 'w', encoding='utf-8') as f:
             for val in value_list:
                 f.write(f"{val}\n")
 
     def read_all_item_to_list_box(self):
         remove_str_f = self.generate_string_text_ffp()
-        with open(remove_str_f, 'r') as f:
+        with open(remove_str_f, 'r', encoding='utf-8') as f:
             lines = f.readlines()
             print('lines: %s' % lines)
         if lines:
