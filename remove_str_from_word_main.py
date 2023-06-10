@@ -5,7 +5,7 @@
 ############################################################################
 import os
 import shutil
-import tkinter
+# import tkinter
 import tkinter as tk
 from tkinter import *
 from tkinter import ttk
