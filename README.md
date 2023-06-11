@@ -4,7 +4,7 @@
 技术奇客出品的Office系列小工具 - 移除Office Word文件的指定字符。可指定目录和自定义移除字符列表， 可批量处理。ITGeeker技术奇客是奇客罗方智能科技的关联公司。
 
 #### 软件架构
-软件采用Python 3.1版本开发，可以运行于Windows 10/11，也可以运行于Linux系统。Windows系统请下载发行版的exe可执行文件即可，Linux理论上只要是Python 3的环境都可直接运行。
+软件采用Python 3.11版本开发，可以运行于Windows 10/11，也可以运行于Linux系统。Windows系统请下载发行版的exe可执行文件即可，Linux理论上只要是Python 3的环境都可直接运行。
 
 #### 运行及使用说明
 
@@ -56,5 +56,6 @@
 
     1.  阅读README.en.md可以查看英文指导
     2.  ITGeeker 官方博客 [www.itgeeker.net](https://www.itgeeker.net)
-    3.  本项目地址 [https://gitee.com/itgeeker/itgeeker_remove_str_from_word](https://gitee.com/itgeeker/itgeeker_remove_str_from_word) 
-    4.  GeekerCloud奇客罗方智能科技 [https://www.geekercloud.com](https://www.geekercloud.com)
+    3.  Gitee开源项目地址 [https://gitee.com/itgeeker/itgeeker_remove_str_from_word](https://gitee.com/itgeeker/itgeeker_remove_str_from_word) 
+    4.  Github开源项目地址 [https://github.com/alanljj/itgeeker_remove_str_from_word](https://github.com/alanljj/itgeeker_remove_str_from_word) 
+    5.  GeekerCloud奇客罗方智能科技 [https://www.geekercloud.com](https://www.geekercloud.com)
