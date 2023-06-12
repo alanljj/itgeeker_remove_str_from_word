@@ -1,5 +1,8 @@
 # -*- coding: utf-8 -*-
-import glob
+###########################################################################
+#    Copyright 2023 奇客罗方智能科技 https://www.geekercloud.com
+#    ITGeeker.net <alanljj@gmail.com>
+############################################################################
 import os
 import win32com.client
 
@@ -23,9 +26,6 @@ def convert_doc2docx_by_win32com(doc_list):
     word.visible = 0
     doc2docx_l = []
 
-    # for i, doc in enumerate(glob.iglob("*.doc")):
-    # for i, doc in enumerate(glob.iglob(r"D:\tmp\hrefond_tmplt\*.doc")):
-    # for i, doc in enumerate(glob.iglob(f_path + r"\*.doc")):
     for i, doc in enumerate(doc_list):
         in_file = os.path.abspath(doc)
         # print('in_file: %s' % in_file)

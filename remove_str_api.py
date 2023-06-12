@@ -59,7 +59,7 @@ def generate_file_and_str_list(report_p, val_list):
     print('docx_list: ', docx_list)
     replaced = replace_str_for_file_list(docx_list, val_list, revised_p)
     if replaced:
-        return True
+        return len(docx_list)
     return False
 
 def replace_str_for_file_list(docx_list, val_list, revised_p):
