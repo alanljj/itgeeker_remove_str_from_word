@@ -1,10 +1,25 @@
-# 移除Office Word文件的指定字符小工具
+# 移除Office Word文件的指定字符小工具 - 开源Word文字移除
 
 #### 介绍
-技术奇客出品的Office系列小工具 - 移除Office Word文件的指定字符。可指定目录和自定义移除字符列表， 可批量处理。ITGeeker技术奇客是奇客罗方智能科技的关联公司。
+技术奇客出品的Office系列小工具 - 移除Office Word文件的指定字符。
+
+    - 可指定目录，软件会处理该目录的所有docx文件
+    - 若有doc文件，则会先转换成docx文件再处理
+    - 可进行批量处理。
+    - 转换后的.docx文件保存在源文件相同目录，文件名带有-converted字样。
+    - 工具包含绿色直接运行版本和可安装版本
+
+技术奇客是奇客罗方智能科技的关联公司。更多信息可访问 ITGeeker技术奇客官方博客 [www.itgeeker.net](https://www.itgeeker.net) 或者 GeekerCloud奇客罗方智能科技 [https://www.geekercloud.com](https://www.geekercloud.com)
+
+>工具运行主界面
+
+[![开源Word文字移除截图](remove_str_from_word_2023-06-12.png "开源Word文字移除工具")](https://www.itgeeker.net/itgeeker-technical-service/itgeeker_remove_str_from_word/)
 
 #### 软件架构
-软件采用Python 3.11版本开发，可以运行于Windows 10/11，也可以运行于Linux系统。Windows系统请下载发行版的exe可执行文件即可，Linux理论上只要是Python 3的环境都可直接运行。
+软件采用Python 3.11版本结合TKinter UI开发，可以运行于Windows 10/11，也可以运行于Linux系统。
+
+    - Windows系统请下载发行版的exe可执行文件即可。
+    - Linux理论上只要是Python 3的环境都可直接运行。
 
 #### 运行及使用说明
 
@@ -25,6 +40,10 @@
 处理过的文件将被保存到子目录“已处理文件”当中，文件名末尾附上“-revised”字样以示区别。
 
 #### 更新日志
+
+> 2023-06- v1.1.2.0
+ 
+    1. 更新介绍，增加工具运行界面截图
 
 > 2023-06-12 v1.1.1.0
  
