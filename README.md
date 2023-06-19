@@ -4,10 +4,10 @@
 技术奇客出品的Office系列小工具 - 移除Office Word文件的指定字符。
 
     - 可指定目录，软件会处理该目录的所有docx文件
-    - 若有doc文件，则会先转换成docx文件再处理
     - 可进行批量处理。
-    - 转换后的.docx文件保存在源文件相同目录，文件名带有-converted字样。
-    - 工具包含绿色直接运行版本和可安装版本
+    - 已处理文件带有-revised字样，保存在子目录《已处理文件》中。
+
+此工具只支持新版docx文件，若有doc文件，建议使用技术奇客开发的开源工具 - [Word格式转换(.doc ➡ .docx) [点击下载并安装]](https://www.itgeeker.net/itgeeker-technical-service/itgeeker_convert_doc_to_docx/)
 
 技术奇客是奇客罗方智能科技的关联公司。更多信息可访问 ITGeeker技术奇客官方博客 [www.itgeeker.net](https://www.itgeeker.net) 或者 GeekerCloud奇客罗方智能科技 [https://www.geekercloud.com](https://www.geekercloud.com)
 
@@ -16,7 +16,8 @@
 [![开源Word文字移除截图](remove_str_from_word_2023-06-12.png "开源Word文字移除工具")](https://www.itgeeker.net/itgeeker-technical-service/itgeeker_remove_str_from_word/)
 
 #### 软件架构
-软件采用Python 3.11版本结合TKinter UI开发，可以运行于Windows 10/11，也可以运行于Linux系统。
+软件采用Python 3.11版本结合TKinter UI开发，可以运行于Windows 10/11。软件基于Office Word软件对.docx格式文件进行处理，前提必须安装Word软件。
+理论上软件也可以运行于Linux系统，但需要依赖LibreOffice。 Linux系统运行功能正在开发中。
 
     - Windows系统请下载发行版的exe可执行文件即可。
     - Linux理论上只要是Python 3的环境都可直接运行。
@@ -41,9 +42,12 @@
 
 #### 更新日志
 
-> 2023-06- v1.1.2.0
+> 2023-06-19 v1.1.2.0
  
     1. 更新介绍，增加工具运行界面截图
+    2. 修复因为没有移除文字引起的不能保存当前配置的错误
+    3. 增加目录文件信息显示docx文件数和doc文件数
+    4. 移除自动转换doc为docx功能，提醒软件只支持docx文件格式处理，建议使用技术奇客的开源工具 - 转换Word旧版doc为新版docx
 
 > 2023-06-12 v1.1.1.0
  

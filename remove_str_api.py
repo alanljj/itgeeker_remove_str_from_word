@@ -33,29 +33,6 @@ def generate_file_and_str_list(report_p, val_list):
     if not os.path.exists(revised_p):
         os.makedirs(revised_p)
     docx_list = [f for f in glob.glob(report_p + r"\[!~$]*.docx")]
-    bn_no_ext_xl = []
-    for docxf in docx_list:
-        bn_no_ext_xl.append(os.path.splitext(os.path.basename(docxf))[0])
-    print('bn_no_ext_xl: ', bn_no_ext_xl)
-    doc_list = [f for f in glob.glob(report_p + r"\[!~$]*.doc")]
-    print('doc_list: ', doc_list)
-    if doc_list:
-        del_list_i = []
-        for i, docf in enumerate(doc_list):
-            doc_bn_no_ext = os.path.splitext(os.path.basename(docf))[0] + '-converted'
-            if doc_bn_no_ext in bn_no_ext_xl:
-                del_list_i.append(i)
-        print('del_list_i: ', del_list_i)
-        if del_list_i:
-            del_list_i = sorted(del_list_i, reverse=True)
-            for dli in del_list_i:
-                if dli < len(doc_list):
-                    doc_list.pop(dli)
-    print('doc_list@after del: ', doc_list)
-    if doc_list:
-        doc2docx_l = convert_doc2docx_by_win32com(doc_list)
-        if doc2docx_l:
-            docx_list.extend(doc2docx_l)
     print('docx_list: ', docx_list)
     replaced = replace_str_for_file_list(docx_list, val_list, revised_p)
     if replaced:
