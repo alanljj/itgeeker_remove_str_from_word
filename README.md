@@ -1,13 +1,13 @@
-# 移除Office Word文件的指定字符小工具 - 开源Word文字移除
+# Office Word移除字符小工具 - 开源Word文字移除软件
 
 #### 介绍
-技术奇客出品的Office系列小工具 - 移除Office Word文件的指定字符。
+技术奇客出品的Office系列小工具 - Office Word移除字符小工具。
 
     - 可指定目录，软件会处理该目录的所有docx文件
     - 可进行批量处理。
     - 已处理文件带有-revised字样，保存在子目录《已处理文件》中。
 
-此工具只支持新版docx文件，若有doc文件，建议使用技术奇客开发的开源工具 - [Word格式转换(.doc ➡ .docx) [点击下载并安装]](https://www.itgeeker.net/itgeeker-technical-service/itgeeker_convert_doc_to_docx/)
+此工具只支持新版docx文件，若要处理旧版的doc文件，建议使用技术奇客开发的开源工具 - [Word格式转换(.doc ➡ .docx) [点击下载并安装]](https://www.itgeeker.net/itgeeker-technical-service/itgeeker_convert_doc_to_docx/)
 
 技术奇客是奇客罗方智能科技的关联公司。更多信息可访问 ITGeeker技术奇客官方博客 [www.itgeeker.net](https://www.itgeeker.net) 或者 GeekerCloud奇客罗方智能科技 [https://www.geekercloud.com](https://www.geekercloud.com)
 
